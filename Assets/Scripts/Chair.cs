@@ -12,8 +12,8 @@ public class Chair : MonoBehaviour
     [SerializeField]
     bool isPlaced = false;
 
-    //[SerializeField]
-    //bool isEnabled = false;
+    [SerializeField]
+    public bool isEnabled = false;
 
     int possibleRots = 1;
 
@@ -79,42 +79,47 @@ public class Chair : MonoBehaviour
     void Update()
     {
 
-        //Counterclockwise
-        if (Input.GetKeyDown(KeyCode.D) && !isPlaced)
+        if (isEnabled)
         {
-            transform.Rotate(new Vector3(0, 0, 90));
 
-            if(rotationStates < 3)
+            //Counterclockwise
+            if (Input.GetKeyDown(KeyCode.D) && !isPlaced)
             {
-                rotationStates++;
-            }
-            else if(rotationStates == 3)
-            {
-                rotationStates = 0;
-            }
+                transform.Rotate(new Vector3(0, 0, 90));
 
-            //mySource.PlayOneShot(squeakySoundCounterClockwise);
+                if (rotationStates < 3)
+                {
+                    rotationStates++;
+                }
+                else if (rotationStates == 3)
+                {
+                    rotationStates = 0;
+                }
 
-            Checked();
-        }
+                //mySource.PlayOneShot(squeakySoundCounterClockwise);
 
-        //Clockwise
-        if (Input.GetKeyDown(KeyCode.C) && !isPlaced)
-        {
-            transform.Rotate(new Vector3(0, 0, -90));
-
-            if (rotationStates > 0)
-            {
-                rotationStates--;
-            }
-            else if (rotationStates == 0)
-            {
-                rotationStates = 3;
+                Checked();
             }
 
-            //mySource.PlayOneShot(squeakySoundClockwise);
+            //Clockwise
+            if (Input.GetKeyDown(KeyCode.C) && !isPlaced)
+            {
+                transform.Rotate(new Vector3(0, 0, -90));
 
-            Checked();
+                if (rotationStates > 0)
+                {
+                    rotationStates--;
+                }
+                else if (rotationStates == 0)
+                {
+                    rotationStates = 3;
+                }
+
+                //mySource.PlayOneShot(squeakySoundClockwise);
+
+                Checked();
+            }
+
         }
     }
 

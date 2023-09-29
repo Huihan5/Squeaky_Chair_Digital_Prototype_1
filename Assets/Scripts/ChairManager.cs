@@ -6,17 +6,13 @@ public class ChairManager : MonoBehaviour
 {
     public int currentPiece = 0;
 
-    public GameObject[] allPieces;
+    [SerializeField]
+    Chair[] allPieces;
 
     // Start is called before the first frame update
     void Start()
     {
-        allPieces = new GameObject[transform.childCount];
-
-        for (int i = 0; i < allPieces.Length; i++)
-        {
-            allPieces[i] = transform.GetChild(i).gameObject;
-        }
+        
     }
 
     // Update is called once per frame
@@ -31,12 +27,14 @@ public class ChairManager : MonoBehaviour
                 currentPiece = 0;
             }
 
-            //for (int i = 0; i < allPieces.Length; i++)
-            //{
-            //    allPieces[i].isEnabled = false;
-            //}
+            for (int i = 0; i < allPieces.Length; i++)
+            {
+                allPieces[i].isEnabled = false;
+            }
 
-            //allPieces[currentPiece].isEnabled = true;
+            allPieces[currentPiece].isEnabled = true;
+
+            Debug.Log("CurrentPiece = " + currentPiece);
         }
     }
 }
