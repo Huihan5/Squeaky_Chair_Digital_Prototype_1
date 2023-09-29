@@ -639,6 +639,7 @@ MonoBehaviour:
   correctRotation:
   - 0
   isPlaced: 0
+  isEnabled: 0
   rotationStates: 0
   correctStates: 0
 --- !u!212 &907091498
@@ -741,6 +742,7 @@ MonoBehaviour:
   correctRotation:
   - 0
   isPlaced: 0
+  isEnabled: 0
   rotationStates: 0
   correctStates: 0
 --- !u!212 &966692372
@@ -843,6 +845,7 @@ MonoBehaviour:
   correctRotation:
   - 0
   isPlaced: 0
+  isEnabled: 0
   rotationStates: 0
   correctStates: 0
 --- !u!212 &1030006924
@@ -997,6 +1000,7 @@ MonoBehaviour:
   correctRotation:
   - 0
   isPlaced: 0
+  isEnabled: 0
   rotationStates: 0
   correctStates: 0
 --- !u!1 &1718041544
@@ -1147,6 +1151,7 @@ MonoBehaviour:
   correctRotation:
   - 0
   isPlaced: 0
+  isEnabled: 0
   rotationStates: 0
   correctStates: 0
 --- !u!1 &1817236105

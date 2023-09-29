@@ -12,8 +12,8 @@ public class Chair : MonoBehaviour
     [SerializeField]
     bool isPlaced = false;
 
-    [SerializeField]
-    bool isEnabled = false;
+    //[SerializeField]
+    //bool isEnabled = false;
 
     int possibleRots = 1;
 
@@ -24,6 +24,14 @@ public class Chair : MonoBehaviour
     public int rotationStates = 0;
 
     public int correctStates = 0;
+
+    public AudioSource mySource;
+
+    public AudioClip squeakySoundClockwise;
+
+    public AudioClip squeakySoundCounterClockwise;
+
+    public AudioClip kada;
 
     private void Awake()
     {
@@ -44,6 +52,8 @@ public class Chair : MonoBehaviour
         {
             isPlaced = true;
             gameManager.correctAssemble();
+
+            //mySource.PlayOneShot(kada);
         }
 
         //if (possibleRots > 1)
@@ -83,6 +93,8 @@ public class Chair : MonoBehaviour
                 rotationStates = 0;
             }
 
+            //mySource.PlayOneShot(squeakySoundCounterClockwise);
+
             Checked();
         }
 
@@ -100,6 +112,8 @@ public class Chair : MonoBehaviour
                 rotationStates = 3;
             }
 
+            //mySource.PlayOneShot(squeakySoundClockwise);
+
             Checked();
         }
     }
@@ -112,6 +126,8 @@ public class Chair : MonoBehaviour
             {
                 isPlaced = true;
                 gameManager.correctAssemble();
+
+                //mySource.PlayOneShot(kada);
             }
             //if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && !isPlaced)
             //{
@@ -130,6 +146,8 @@ public class Chair : MonoBehaviour
             {
                 isPlaced = true;
                 gameManager.correctAssemble();
+
+                //mySource.PlayOneShot(kada);
             }
 
             //if (transform.eulerAngles.z == correctRotation[0] && !isPlaced)

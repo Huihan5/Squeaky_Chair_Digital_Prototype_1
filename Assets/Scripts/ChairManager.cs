@@ -31,12 +31,12 @@ public class ChairManager : MonoBehaviour
                 currentPiece = 0;
             }
 
-            for (int i = 0; i < allPieces.Length; i++)
-            {
-                allPieces[i].isEnabled = false;
-            }
+            //for (int i = 0; i < allPieces.Length; i++)
+            //{
+            //    allPieces[i].isEnabled = false;
+            //}
 
-            allPieces[currentPiece].isEnabled = true;
+            //allPieces[currentPiece].isEnabled = true;
         }
     }
 }

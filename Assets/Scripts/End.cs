@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
+    public AudioSource mySource;
+    public AudioClip kada;
+    public AudioClip Horray;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //mySource.PlayOneShot(Horray);
     }
 
     // Update is called once per frame
@@ -17,6 +21,8 @@ public class End : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene(0);
+
+            //mySource.PlayOneShot(kada);
         }
     }
 }

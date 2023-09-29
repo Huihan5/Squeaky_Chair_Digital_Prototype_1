@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour
 {
+    public AudioSource mySource;
+    public AudioClip kada;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,8 @@ public class Intro : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene(1);
+
+            //mySource.PlayOneShot(kada);
         }
     }
 }
