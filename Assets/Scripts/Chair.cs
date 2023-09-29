@@ -52,7 +52,7 @@ public class Chair : MonoBehaviour
     void Update()
     {
         //Counterclockwise
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) && !isPlaced)
         {
             transform.Rotate(new Vector3(0, 0, 90));
 
@@ -60,7 +60,7 @@ public class Chair : MonoBehaviour
         }
 
         //Clockwise
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && !isPlaced)
         {
             transform.Rotate(new Vector3(0, 0, -90));
 
@@ -77,11 +77,11 @@ public class Chair : MonoBehaviour
                 isPlaced = true;
                 gameManager.correctAssemble();
             }
-            else if (isPlaced)
-            {
-                isPlaced = false;
-                gameManager.wrongAsseble();
-            }
+            //else if (isPlaced)
+            //{
+            //    isPlaced = false;
+            //    gameManager.wrongAsseble();
+            //}
         }
         else
         {
@@ -90,11 +90,11 @@ public class Chair : MonoBehaviour
                 isPlaced = true;
                 gameManager.correctAssemble();
             }
-            else if (isPlaced)
-            {
-                isPlaced = false;
-                gameManager.wrongAsseble();
-            }
+            //else if (isPlaced)
+            //{
+            //    isPlaced = false;
+            //    gameManager.wrongAsseble();
+            //}
         }
     }
 }
