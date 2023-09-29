@@ -12,6 +12,9 @@ public class Chair : MonoBehaviour
     [SerializeField]
     bool isPlaced = false;
 
+    [SerializeField]
+    bool isEnabled = false;
+
     int possibleRots = 1;
 
     GameManager gameManager;
