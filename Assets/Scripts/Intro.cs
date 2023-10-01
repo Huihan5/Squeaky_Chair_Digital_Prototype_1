@@ -8,6 +8,10 @@ public class Intro : MonoBehaviour
     public AudioSource mySource;
     public AudioClip kada;
 
+    public float countDownTime = 5f;
+
+    bool countDown = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +23,18 @@ public class Intro : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(1);
-
             mySource.PlayOneShot(kada);
+            countDown = true;
+        }
+
+        if (countDown)
+        {
+            countDownTime -= Time.deltaTime;
+        }
+
+        if(countDownTime <= 0)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }

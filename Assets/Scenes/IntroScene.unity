@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mySource: {fileID: 168224658}
   kada: {fileID: 8300000, guid: 13c09d27cd6614359b4666bc3d0bca97, type: 3}
+  countDownTime: 1.5
 --- !u!4 &168224657
 Transform:
   m_ObjectHideFlags: 0
