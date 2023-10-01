@@ -21,7 +21,7 @@ public class Intro : MonoBehaviour
         {
             SceneManager.LoadScene(1);
 
-            //mySource.PlayOneShot(kada);
+            mySource.PlayOneShot(kada);
         }
     }
 }

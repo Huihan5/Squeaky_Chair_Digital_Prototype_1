@@ -12,7 +12,7 @@ public class End : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //mySource.PlayOneShot(Horray);
+        mySource.PlayOneShot(Horray);
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class End : MonoBehaviour
         {
             SceneManager.LoadScene(0);
 
-            //mySource.PlayOneShot(kada);
+            mySource.PlayOneShot(kada);
         }
     }
 }

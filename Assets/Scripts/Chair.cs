@@ -53,7 +53,7 @@ public class Chair : MonoBehaviour
             isPlaced = true;
             gameManager.correctAssemble();
 
-            //mySource.PlayOneShot(kada);
+            mySource.PlayOneShot(kada);
         }
 
         //if (possibleRots > 1)
@@ -96,7 +96,7 @@ public class Chair : MonoBehaviour
                     rotationStates = 0;
                 }
 
-                //mySource.PlayOneShot(squeakySoundCounterClockwise);
+                mySource.PlayOneShot(squeakySoundCounterClockwise);
 
                 Checked();
             }
@@ -115,7 +115,7 @@ public class Chair : MonoBehaviour
                     rotationStates = 3;
                 }
 
-                //mySource.PlayOneShot(squeakySoundClockwise);
+                mySource.PlayOneShot(squeakySoundClockwise);
 
                 Checked();
             }
@@ -132,7 +132,7 @@ public class Chair : MonoBehaviour
                 isPlaced = true;
                 gameManager.correctAssemble();
 
-                //mySource.PlayOneShot(kada);
+                mySource.PlayOneShot(kada);
             }
             //if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && !isPlaced)
             //{
@@ -152,7 +152,7 @@ public class Chair : MonoBehaviour
                 isPlaced = true;
                 gameManager.correctAssemble();
 
-                //mySource.PlayOneShot(kada);
+                mySource.PlayOneShot(kada);
             }
 
             //if (transform.eulerAngles.z == correctRotation[0] && !isPlaced)
